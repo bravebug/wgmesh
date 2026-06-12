@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 - 2026-06-12
+
+- Fixed setuptools license metadata for modern setuptools.
+
 ## 1.0.0 - 2026-06-12
 
 Initial stable release.

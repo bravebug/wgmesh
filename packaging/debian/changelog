@@ -1,3 +1,9 @@
+wgmesh (1.0.1-1) unstable; urgency=medium
+
+  * Fixed setuptools license metadata for modern setuptools.
+
+ -- Leonid Selivanov <bravebug@gmail.com>  Fri, 12 Jun 2026 17:30:00 +0300
+
 wgmesh (1.0.0-1) unstable; urgency=medium
 
   * Initial release.
