@@ -1,0 +1,14 @@
+mesh:
+  office.example.com:
+    branch1.example.com: 2/iwQdUG6cgEgrGV1uat58JgYOuKVk1hdOzL3+0Ii4Y=
+    branch2.example.com: OlY7nC3AGuevrZmidzuso4UV1cwuaknZZmrlab7bE1s=
+    windows-laptop: RQET5jzD6W/PyiUNiAdO2Ahrvh743JkmBLwd0X9+acA=
+
+  branch1.example.com:
+    office.example.com: 2/iwQdUG6cgEgrGV1uat58JgYOuKVk1hdOzL3+0Ii4Y=
+
+  branch2.example.com:
+    office.example.com: OlY7nC3AGuevrZmidzuso4UV1cwuaknZZmrlab7bE1s=
+
+  windows-laptop:
+    office.example.com: RQET5jzD6W/PyiUNiAdO2Ahrvh743JkmBLwd0X9+acA=

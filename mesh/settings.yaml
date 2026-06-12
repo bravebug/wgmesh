@@ -1,0 +1,3 @@
+InterfaceName: wg0
+ListenPort: 51820
+PersistentKeepalive: 25

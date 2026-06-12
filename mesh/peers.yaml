@@ -1,0 +1,39 @@
+peers:
+  office.example.com:
+    Interface:
+      Address: 10.90.0.1/32
+      PrivateKey: AFhqLrZHLg5u9Q4IkhXYnQr7s4utgeFAejWJqd40C2E=
+
+    Endpoint: office.example.com
+
+    AllowedIPs:
+      - 10.7.0.0/16
+
+  branch1.example.com:
+    Interface:
+      Address: 10.90.1.1/32
+      PrivateKey: 0HtjxjqHAz0kbjfVr/5qlGUE5x8qfGpKCAUGBcQh7HA=
+
+    Endpoint: branch1.example.com
+
+    AllowedIPs:
+      - 10.21.0.0/16
+
+  branch2.example.com:
+    Interface:
+      Address: 10.90.2.1/32
+      PrivateKey: EP7scpuGEUz9GGvufCLUog5hXCvEp1QAcp12xroCYFQ=
+
+    Endpoint: null
+
+    AllowedIPs:
+      - 10.22.0.0/16
+
+  windows-laptop:
+    Interface:
+      Address: 10.90.100.10/32
+      PrivateKey: iFV79b56jJEudms3Kl4QW265FAtTU5AhorbXWKdQC0w=
+
+    Endpoint: null
+
+    AllowedIPs: []

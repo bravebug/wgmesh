@@ -1,0 +1,27 @@
+# wgmesh global settings.
+#
+# This file is optional. If it is missing, these defaults are used.
+
+# WireGuard interface name used for generated configs.
+#
+# Output file:
+#
+#   generated/<peer>/wg0.conf
+#
+InterfaceName: wg0
+
+# Default WireGuard listen/endpoint port.
+#
+# If a peer has Endpoint but no EndpointPort, this value is used.
+#
+ListenPort: 51820
+
+# PersistentKeepalive value for generated [Peer] blocks.
+#
+# Use:
+#
+#   PersistentKeepalive: null
+#
+# to disable this line.
+#
+PersistentKeepalive: 25

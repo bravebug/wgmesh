@@ -1,0 +1,3 @@
+completion/wgmesh.bash usr/share/bash-completion/completions/
+mesh/*.example usr/share/doc/wgmesh/examples/
+src/wgmesh/templates/routes/*.j2 usr/share/doc/wgmesh/examples/templates/routes/

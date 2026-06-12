@@ -1,0 +1,93 @@
+# wgmesh peer definitions.
+#
+# Peer identifiers are internal names used by wgmesh.
+# They are not written to WireGuard config except as comments.
+#
+# Recommended characters:
+#
+#   a-z A-Z 0-9 . _ -
+#
+# Examples:
+#
+#   office.example.com
+#   branch1.example.com
+#   windows-laptop
+
+peers:
+
+  office.example.com:
+
+    Interface:
+
+      # Local WireGuard address.
+      #
+      # This value is written to:
+      #
+      #   [Interface]
+      #   Address = ...
+      #
+      # It is also automatically added to AllowedIPs
+      # of remote peers.
+      #
+      # Must be unique.
+      #
+      Address: 10.90.0.1/32
+
+      # WireGuard PrivateKey.
+      #
+      # null means:
+      #
+      #   wgmesh fill
+      #
+      # will generate it using:
+      #
+      #   wg genkey
+      #
+      PrivateKey: null
+
+    # Public endpoint hostname or IP.
+    #
+    # null means this peer has no public endpoint
+    # or is expected to initiate connection itself.
+    #
+    Endpoint: office.example.com
+
+    # Optional endpoint port.
+    #
+    # If omitted, settings.ListenPort is used.
+    #
+    # EndpointPort: 51820
+
+    # Networks behind this peer.
+    #
+    # Remote peer AllowedIPs are generated as:
+    #
+    #   remote.Interface.Address
+    #   +
+    #   remote.AllowedIPs
+    #
+    AllowedIPs:
+      - 10.7.0.0/16
+
+  branch1.example.com:
+
+    Interface:
+      Address: 10.90.1.1/32
+      PrivateKey: null
+
+    Endpoint: branch1.example.com
+
+    AllowedIPs:
+      - 10.21.0.0/16
+
+  windows-laptop:
+
+    Interface:
+      Address: 10.90.100.10/32
+      PrivateKey: null
+
+    # Windows/client peer behind NAT.
+    Endpoint: null
+
+    # Client does not publish LAN networks.
+    AllowedIPs: []

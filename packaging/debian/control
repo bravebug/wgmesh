@@ -1,0 +1,27 @@
+Source: wgmesh
+Section: net
+Priority: optional
+Maintainer: Leonid Selivanov <bravebug@gmail.com>
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ pybuild-plugin-pyproject,
+ python3-all,
+ python3-setuptools,
+ python3-yaml,
+ python3-jinja2,
+Standards-Version: 4.7.0
+Homepage: https://github.com/bravebug/wgmesh
+Rules-Requires-Root: no
+
+Package: wgmesh
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ python3-yaml,
+ python3-jinja2,
+ wireguard-tools
+Description: WireGuard mesh topology generator
+ wgmesh generates WireGuard mesh configuration files and simple route
+ artifacts from YAML topology files.

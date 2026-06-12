@@ -1,0 +1,44 @@
+# wgmesh topology.
+#
+# This file simultaneously defines:
+#
+#   - connections between peers
+#   - WireGuard PresharedKey values for those connections
+#
+# Missing entry means:
+#
+#   no connection
+#
+# null means:
+#
+#   wgmesh fill
+#
+# will generate PSK using:
+#
+#   wg genpsk
+#
+# Reverse entry must exist and contain identical value.
+
+mesh:
+
+  office.example.com:
+
+    # office <-> branch1 connection.
+    #
+    # null will be replaced by wgmesh fill.
+    #
+    branch1.example.com: null
+
+    # office <-> windows-laptop connection.
+    #
+    windows-laptop: null
+
+  branch1.example.com:
+
+    # Reverse connection must exist.
+    #
+    office.example.com: null
+
+  windows-laptop:
+
+    office.example.com: null

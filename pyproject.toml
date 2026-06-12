@@ -1,0 +1,59 @@
+[project]
+name = "wgmesh"
+version = "1.0.0"
+description = "WireGuard mesh topology generator"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+    { name = "Leonid Selivanov", email = "bravebug@gmail.com" },
+]
+keywords = [
+    "wireguard",
+    "mesh",
+    "vpn",
+    "networking",
+    "configuration",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: System :: Networking",
+    "Topic :: System :: Systems Administration",
+]
+dependencies = [
+    "PyYAML",
+    "Jinja2",
+]
+
+[project.scripts]
+wgmesh = "wgmesh.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/bravebug/wgmesh"
+Repository = "https://github.com/bravebug/wgmesh"
+Issues = "https://github.com/bravebug/wgmesh/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=80"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.package-data]
+wgmesh = [
+    "examples/mesh/*.example",
+    "templates/routes/*.j2",
+]
